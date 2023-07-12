@@ -13,6 +13,7 @@ fn main() {
         println!("3. Нахождение медианы");
         println!("4. Нахождение моды");
         println!("5. просмотреть вектор");
+        println!("6. удаление вектора");
 
         let mut input: String = String::new();
 
@@ -26,7 +27,7 @@ fn main() {
         match input {
             1 => {
                 if !is_exist {
-                    println!("Вектор cоздан!");
+                    println!("Вектор был успешно cоздан!");
                     is_exist = true;
 
                     println!("Введите кол-во элементов для заполнения:");
@@ -90,6 +91,15 @@ fn main() {
                 if is_exist {
                     println!("Ваш вектор:");
                     println!("{:?}", vector);
+                } else {
+                    println!("Вектора не обнаружено!");
+                }
+            }
+            6 => {
+                if is_exist{
+                    println!("Ваш был успешно удален");
+                    vector.clear();
+                    is_exist = false;
                 } else {
                     println!("Вектора не обнаружено!");
                 }
